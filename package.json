@@ -19,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/venchoi/mainRepo/issues"
   },
-  "homepage": "https://github.com/venchoi/mainRepo#readme"
+  "homepage": "https://github.com/venchoi/mainRepo#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^2.3.0",
+    "prettier": "^1.17.1"
+  }
 }
