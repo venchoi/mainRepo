@@ -10,6 +10,18 @@
     "type": "git",
     "url": "git+https://github.com/venchoi/mainRepo.git"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $GIT_PARAMS",
+      "pre-commit": "lint-staged && pretty-quick --staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
   "keywords": [
     "submodule",
     "husky"
@@ -20,11 +32,14 @@
     "url": "https://github.com/venchoi/mainRepo/issues"
   },
   "homepage": "https://github.com/venchoi/mainRepo#readme",
-  "dependencies": {},
+  "dependencies": {
+    "pretty-quick": "^1.11.0"
+  },
   "devDependencies": {
     "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-prettier": "^3.1.0",
     "husky": "^2.3.0",
+    "lint-staged": "^8.1.7",
     "prettier": "^1.17.1"
   }
 }
